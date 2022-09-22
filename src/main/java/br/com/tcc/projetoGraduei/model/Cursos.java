@@ -1,6 +1,10 @@
 package br.com.tcc.projetoGraduei.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -9,7 +13,7 @@ public class Cursos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nomeCurso;
+    private String nome_curso;
     private String duracao;
     private String descricao;
 
@@ -22,11 +26,11 @@ public class Cursos {
     }
 
     public String getNomeCurso() {
-        return nomeCurso;
+        return nome_curso;
     }
 
     public void setNomeCurso(String nomeCurso) {
-        this.nomeCurso = nomeCurso;
+        this.nome_curso = nome_curso;
     }
     public String getDuracao() {
         return duracao;
@@ -55,5 +59,17 @@ public class Cursos {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "curso")
+    private List<PolosCursos> polosCursos = new ArrayList<>();
+
+    public List<PolosCursos> getPolosCursos() {
+        return polosCursos;
+    }
+
+    public void setPolosCursos(List<PolosCursos> polosCursos) {
+        this.polosCursos = polosCursos;
     }
 }

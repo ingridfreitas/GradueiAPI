@@ -1,0 +1,1 @@
+ALTER TABLE polos ADD CONSTRAINT fk_polo_universidade FOREIGN KEY(universidade_id) REFERENCES universidades(id);
