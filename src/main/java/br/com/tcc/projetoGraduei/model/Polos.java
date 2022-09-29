@@ -75,15 +75,4 @@ public class Polos {
         this.universidades = universidades;
     }
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "polo")
-    private List<PolosCursos> polosCursos = new ArrayList<>();
-
-    public List<PolosCursos> getPolosCursos() {
-        return polosCursos;
-    }
-
-    public void setPolosCursos(List<PolosCursos> polosCursos) {
-        this.polosCursos = polosCursos;
-    }
 }
