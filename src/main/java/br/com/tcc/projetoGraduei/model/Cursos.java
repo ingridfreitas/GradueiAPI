@@ -48,6 +48,18 @@ public class Cursos {
         this.descricao = descricao;
     }
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "cursos")
+    private List<PolosCursos> polosCursos = new ArrayList<>();
+
+    public List<PolosCursos> getPolosCursos() {
+        return polosCursos;
+    }
+
+    public void setPolosCursos(List<PolosCursos> polosCursos) {
+        this.polosCursos = polosCursos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

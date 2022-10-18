@@ -42,6 +42,18 @@ public class Polos {
         return id.equals(polos.id);
     }
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "polos")
+    private List<PolosCursos> polosCursos = new ArrayList<>();
+
+    public List<PolosCursos> getPolosCursos() {
+        return polosCursos;
+    }
+
+    public void setPolosCursos(List<PolosCursos> polosCursos) {
+        this.polosCursos = polosCursos;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
