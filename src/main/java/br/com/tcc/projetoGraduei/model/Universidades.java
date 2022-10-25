@@ -28,7 +28,15 @@ public class Universidades {
 
     private String img;
 
-    private Stri
+    private String link;
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
 
     public String getImg() {
         return img;
