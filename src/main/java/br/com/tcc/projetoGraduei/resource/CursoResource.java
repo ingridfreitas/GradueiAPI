@@ -1,9 +1,11 @@
 package br.com.tcc.projetoGraduei.resource;
 
 import br.com.tcc.projetoGraduei.model.Cursos;
+import br.com.tcc.projetoGraduei.model.Universidades;
 import br.com.tcc.projetoGraduei.repository.CursoRepository;
 import br.com.tcc.projetoGraduei.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -18,6 +20,7 @@ public class CursoResource {
     @Autowired
     private CursoRepository cursoRepository;
 
+    @CrossOrigin()
     @GetMapping("/todos")
     public List<Cursos> listarCursos(){return cursoService.listarCursos();
     }

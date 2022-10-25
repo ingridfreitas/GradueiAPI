@@ -15,8 +15,26 @@ public class Universidades {
     private Integer id;
     private String nome_universidade;
     private String sigla;
-    private String instituicao;
 
+    private String categoria;
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    private String img;
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     public Integer getId() {
         return id;
@@ -40,14 +58,6 @@ public class Universidades {
 
     public void setSigla(String sigla) {
         this.sigla = sigla;
-    }
-
-    public String getInstituicao() {
-        return instituicao;
-    }
-
-    public void setInstituicao(String instituicao) {
-        this.instituicao = instituicao;
     }
 
     @Override

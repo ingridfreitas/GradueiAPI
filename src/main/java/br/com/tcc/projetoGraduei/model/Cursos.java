@@ -17,6 +17,16 @@ public class Cursos {
     private String duracao;
     private String descricao;
 
+    private String img;
+
+    public String getImgPath() {
+        return img;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.img = img;
+    }
+
     public Integer getId() {
         return id;
     }

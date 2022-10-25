@@ -18,7 +18,7 @@ public class PolosCursosResource {
 
     @Autowired
     private PolosCursosRepository polosCursosRepository;
-
+    @CrossOrigin()
     @GetMapping("/todos")
     public List<PolosCursos> listarPolosCursos(){return polosCursosService.listarPolosCursos();}
 

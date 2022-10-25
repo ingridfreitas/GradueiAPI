@@ -10,10 +10,20 @@ import java.util.Objects;
 @Entity
 @Table(name = "estados")
 public class Estados {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nomeEstado;
+
+    public String getNome_estado() {
+        return nome_estado;
+    }
+
+    public void setNome_estado(String nome_estado) {
+        this.nome_estado = nome_estado;
+    }
+
+    private String nome_estado;
 
     @JsonIgnore
     @OneToMany(mappedBy = "estado")
@@ -33,14 +43,6 @@ public class Estados {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getNomeEstado() {
-        return nomeEstado;
-    }
-
-    public void setNomeEstado(String nomeEstado) {
-        this.nomeEstado = nomeEstado;
     }
 
     @Override

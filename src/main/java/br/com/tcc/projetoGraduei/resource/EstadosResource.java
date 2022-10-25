@@ -1,9 +1,11 @@
 package br.com.tcc.projetoGraduei.resource;
 
 import br.com.tcc.projetoGraduei.model.Estados;
+import br.com.tcc.projetoGraduei.model.Universidades;
 import br.com.tcc.projetoGraduei.repository.EstadosRepository;
 import br.com.tcc.projetoGraduei.service.EstadosService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,12 +15,13 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/estados")
 public class EstadosResource {
-    @Autowired
-    private EstadosService estadosService;
+   @Autowired
+   private EstadosRepository estadosRepository;
 
-    @Autowired
-    private EstadosRepository estadosRepository;
+   @Autowired
+   private EstadosService estadosService;
 
+    @CrossOrigin()
     @GetMapping("/todos")
     public List<Estados> listarEstados(){
         return estadosService.listarEstados();

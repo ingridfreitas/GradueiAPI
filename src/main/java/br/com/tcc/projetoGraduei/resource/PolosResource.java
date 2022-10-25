@@ -1,9 +1,11 @@
 package br.com.tcc.projetoGraduei.resource;
 
+import br.com.tcc.projetoGraduei.model.Estados;
 import br.com.tcc.projetoGraduei.model.Polos;
 import br.com.tcc.projetoGraduei.repository.PolosRepository;
 import br.com.tcc.projetoGraduei.service.PolosService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,7 @@ public class PolosResource {
     @Autowired
     private PolosService polosService;
 
+    @CrossOrigin()
     @GetMapping("/todos")
     public List<Polos> listarPolos(){return polosService.listarPolos();}
 
