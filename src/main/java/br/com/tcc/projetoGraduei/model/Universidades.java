@@ -28,6 +28,8 @@ public class Universidades {
 
     private String img;
 
+    private Stri
+
     public String getImg() {
         return img;
     }
