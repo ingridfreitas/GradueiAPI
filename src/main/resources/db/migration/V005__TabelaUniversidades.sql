@@ -17,4 +17,4 @@ insert into universidades(nome_universidade,sigla, categoria, img, link) values 
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade Estadual de Campinas', 'Unicamp', 'Pública', '/assets/logo/unicamp.png', 'https://www.unicamp.br/unicamp/');
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Pontifícia Universidade Católica de São Paulo', 'PUC', 'Privada', '/assets/logo/puc.png', 'https://www.pucsp.br/home');
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Anhanguera', '', 'Privada', '/assets/logo/anhanguera.png', 'https://www.anhanguera.com/');
-insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade de São Paulo', 'USP', 'Pública', '/assets/logo/usp.png', 'https://www.usp.org/');
+insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade de São Paulo', 'USP', 'Pública', '/assets/logo/usp.png', 'https://www5.usp.br/');
