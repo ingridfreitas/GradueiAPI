@@ -9,7 +9,7 @@ public class Cidades {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nomeCidade;
+    private String nome_cidade;
 
     public Integer getId() {
         return id;
@@ -19,12 +19,12 @@ public class Cidades {
         this.id = id;
     }
 
-    public String getNomeCidade() {
-        return nomeCidade;
+    public String getNome_cidade() {
+        return nome_cidade;
     }
 
-    public void setNomeCidade(String nomeCidade) {
-        this.nomeCidade = nomeCidade;
+    public void setNome_cidade(String nome_cidade) {
+        this.nome_cidade = nome_cidade;
     }
 
     @JoinColumn(name = "estado_id")
