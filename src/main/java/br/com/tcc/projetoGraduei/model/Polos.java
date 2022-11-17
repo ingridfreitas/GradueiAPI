@@ -17,47 +17,13 @@ public class Polos {
     private String latitude;
     private String longitude;
 
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Polos polos = (Polos) o;
-        return id.equals(polos.id);
-    }
-
     @JsonIgnore
     @OneToMany(mappedBy = "polos")
     private List<PolosCursos> polosCursos = new ArrayList<>();
 
-    public List<PolosCursos> getPolosCursos() {
-        return polosCursos;
-    }
-
-    public void setPolosCursos(List<PolosCursos> polosCursos) {
-        this.polosCursos = polosCursos;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+    @JoinColumn(name = "universidade_id")
+    @ManyToOne
+    private Universidades universidades;
 
     public Integer getId() {
         return id;
@@ -75,9 +41,29 @@ public class Polos {
         this.nome_polo = nome_polo;
     }
 
-    @JoinColumn(name = "universidade_id")
-    @ManyToOne
-    private Universidades universidades;
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public List<PolosCursos> getPolosCursos() {
+        return polosCursos;
+    }
+
+    public void setPolosCursos(List<PolosCursos> polosCursos) {
+        this.polosCursos = polosCursos;
+    }
 
     public Universidades getUniversidades() {
         return universidades;
@@ -85,6 +71,19 @@ public class Polos {
 
     public void setUniversidades(Universidades universidades) {
         this.universidades = universidades;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Polos polos = (Polos) o;
+        return id.equals(polos.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
 }

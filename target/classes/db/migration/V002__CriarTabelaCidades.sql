@@ -5,6 +5,8 @@ estado_id int not null
 );
 
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Lençóis Paulista',24);
+INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Lençóis Paulista',1);
+
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Macatuba',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Borebi',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Areiópolis',24);

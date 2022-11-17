@@ -7,8 +7,8 @@ img varchar(200),
 link varchar(250)
 );
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Faculdade de Tecnologia', 'Fatec', 'Pública', '/assets/logo/fatec.png', 'http://www.fatecsp.br/');
-insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade Estadual de São Paulo', 'Univesp', 'Pública', '/assets/logo/univesp.png', 'https://univesp.br/');
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade Estadual Paulista', 'Unesp', 'Pública', '/assets/logo/unesp.png', 'https://www2.unesp.br/');
+insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade Virtual de São Paulo', 'Univesp', 'Pública', '/assets/logo/univesp.png', 'https://univesp.br/');
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Centro Universitário Sagrado Coração', 'Unisagrado', 'Privada', '/assets/logo/unisagrado.png', 'https://unisagrado.edu.br/');
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Universidade Paulista', 'Unip', 'Privada', '/assets/logo/unip.png', 'https://www.unip.br/');
 insert into universidades(nome_universidade,sigla, categoria, img, link) values ('Faculdade de Ensino superior e Formação Integral', 'Faef', 'privada', '/assets/logo/faef.png', 'https://www.faef.br/');

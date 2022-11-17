@@ -2,15 +2,11 @@ package br.com.tcc.projetoGraduei.resource;
 
 import br.com.tcc.projetoGraduei.dto.CidadeEstado;
 import br.com.tcc.projetoGraduei.model.Cidades;
-import br.com.tcc.projetoGraduei.model.Universidades;
 import br.com.tcc.projetoGraduei.repository.CidadesRepository;
 import br.com.tcc.projetoGraduei.service.CidadesService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 
 import java.util.List;
 import java.util.Optional;
@@ -26,21 +22,24 @@ public class CidadesResource {
 
     @CrossOrigin()
     @GetMapping("/todos")
-    public List<Cidades> listarCidades(){return cidadesService.listarCidades();}
+    public List<Cidades> listarCidades() {
+        return cidadesService.listarCidades();
+    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cidades>buscarPeloId(@PathVariable Integer id){
-        Optional<Cidades>cidades = cidadesRepository.findById(id);
-        return cidades.isPresent() ? ResponseEntity.ok(cidades.get()) : ResponseEntity.notFound() .build();
+    public ResponseEntity<Cidades> buscarPeloId(@PathVariable Integer id) {
+        Optional<Cidades> cidades = cidadesRepository.findById(id);
+        return cidades.isPresent() ? ResponseEntity.ok(cidades.get()) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
-    public void remover (@PathVariable Integer id){cidadesRepository.deleteById(id);
+    public void remover(@PathVariable Integer id) {
+        cidadesRepository.deleteById(id);
     }
 
     @CrossOrigin
-   @GetMapping("/estados")
-    public List<CidadeEstado> buscarCidade(@RequestParam String nome_estado){
+    @GetMapping("/estados")
+    public List<CidadeEstado> buscarCidade(@RequestParam String nome_estado) {
 
         return cidadesRepository.listarCidadeEstado(nome_estado);
     }
