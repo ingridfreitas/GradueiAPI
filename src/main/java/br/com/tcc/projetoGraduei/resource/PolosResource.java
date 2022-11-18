@@ -1,6 +1,7 @@
 package br.com.tcc.projetoGraduei.resource;
 
 import br.com.tcc.projetoGraduei.dto.CidadeEstado;
+import br.com.tcc.projetoGraduei.dto.PolosCidades;
 import br.com.tcc.projetoGraduei.dto.PolosUniversidades;
 import br.com.tcc.projetoGraduei.model.Estados;
 import br.com.tcc.projetoGraduei.model.Polos;
@@ -41,5 +42,12 @@ public class PolosResource {
     @GetMapping("/universidades")
     public List<PolosUniversidades> buscaPoloUni(@RequestParam String categoria){
         return polosRepository.listarPoloUni(categoria);
+    }
+
+    @CrossOrigin
+    @GetMapping("/cidades")
+    public List<PolosCidades> buscarPoloCidade(@RequestParam String nome_cidade) {
+
+        return polosRepository.listarPoloCidade(nome_cidade);
     }
 }

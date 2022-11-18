@@ -25,6 +25,10 @@ public class Polos {
     @ManyToOne
     private Universidades universidades;
 
+    @JoinColumn(name = "cidade_id")
+    @ManyToOne
+    private Cidades cidades;
+
     public Integer getId() {
         return id;
     }
@@ -71,6 +75,14 @@ public class Polos {
 
     public void setUniversidades(Universidades universidades) {
         this.universidades = universidades;
+    }
+
+    public Cidades getCidades() {
+        return cidades;
+    }
+
+    public void setCidades(Cidades cidades) {
+        this.cidades = cidades;
     }
 
     @Override

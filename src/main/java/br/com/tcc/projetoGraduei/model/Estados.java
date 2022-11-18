@@ -14,6 +14,20 @@ public class Estados {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private String nome_estado;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "estado")
+    private List<Cidades> cidades = new ArrayList<>();
+
+    //Getters and Setters
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNome_estado() {
         return nome_estado;
@@ -23,26 +37,12 @@ public class Estados {
         this.nome_estado = nome_estado;
     }
 
-    private String nome_estado;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "estado")
-    private List<Cidades> cidades = new ArrayList<>();
-
     public List<Cidades> getCidades() {
         return cidades;
     }
 
     public void setCidades(List<Cidades> cidades) {
         this.cidades = cidades;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     @Override

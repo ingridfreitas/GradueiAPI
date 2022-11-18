@@ -16,17 +16,13 @@ public class Cursos {
     private String nome_curso;
     private String duracao;
     private String descricao;
-
     private String img;
 
-    public String getImgPath() {
-        return img;
-    }
+    @JsonIgnore
+    @OneToMany(mappedBy = "cursos")
+    private List<PolosCursos> polosCursos = new ArrayList<>();
 
-    public void setImgPath(String imgPath) {
-        this.img = img;
-    }
-
+    //Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -35,13 +31,14 @@ public class Cursos {
         this.id = id;
     }
 
-    public String getNomeCurso() {
+    public String getNome_curso() {
         return nome_curso;
     }
 
-    public void setNomeCurso(String nomeCurso) {
+    public void setNome_curso(String nome_curso) {
         this.nome_curso = nome_curso;
     }
+
     public String getDuracao() {
         return duracao;
     }
@@ -58,9 +55,13 @@ public class Cursos {
         this.descricao = descricao;
     }
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "cursos")
-    private List<PolosCursos> polosCursos = new ArrayList<>();
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     public List<PolosCursos> getPolosCursos() {
         return polosCursos;

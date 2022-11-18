@@ -1,6 +1,10 @@
 package br.com.tcc.projetoGraduei.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +15,16 @@ public class Cidades {
     private Integer id;
     private String nome_cidade;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "cidades")
+    private List<Polos> polos = new ArrayList<>();
+
+    @JoinColumn(name = "estado_id")
+    @ManyToOne
+    private Estados estado;
+
+
+    //Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -27,9 +41,13 @@ public class Cidades {
         this.nome_cidade = nome_cidade;
     }
 
-    @JoinColumn(name = "estado_id")
-    @ManyToOne
-    private Estados estado;
+    public List<Polos> getPolos() {
+        return polos;
+    }
+
+    public void setPolos(List<Polos> polos) {
+        this.polos = polos;
+    }
 
     public Estados getEstado() {
         return estado;

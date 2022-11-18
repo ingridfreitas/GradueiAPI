@@ -15,37 +15,15 @@ public class Universidades {
     private Integer id;
     private String nome_universidade;
     private String sigla;
-
     private String categoria;
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
     private String img;
-
     private String link;
 
-    public String getLink() {
-        return link;
-    }
+    @JsonIgnore
+    @OneToMany(mappedBy = "universidades")
+    private List<Polos> polos = new ArrayList<>();
 
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
+    //Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -70,6 +48,38 @@ public class Universidades {
         this.sigla = sigla;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public List<Polos> getPolos() {
+        return polos;
+    }
+
+    public void setPolos(List<Polos> polos) {
+        this.polos = polos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -81,17 +91,5 @@ public class Universidades {
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "universidades")
-    private List<Polos> polos = new ArrayList<>();
-
-    public List<Polos> getPolos() {
-        return polos;
-    }
-
-    public void setPolos(List<Polos> polos) {
-        this.polos = polos;
     }
 }
