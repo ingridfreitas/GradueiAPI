@@ -29,8 +29,8 @@ public class PolosRepositoryImpl {
 
         criteriaQuery.select(criteriaBuilder.construct(PolosUniversidades.class,
                 root.get("id"),
-                root.get("nome_polo"),
-                root.get("universidades")
+                root.get("universidades"),
+                root.get("cidades")
         ));
 
         criteriaQuery.where(
@@ -51,8 +51,8 @@ public class PolosRepositoryImpl {
 
         criteriaQuery.select(criteriaBuilder.construct(PolosCidades.class,
                 root.get("id"),
-                root.get("nome_polo"),
-                root.get("cidades")
+                root.get("cidades"),
+                root.get("universidades")
         ));
 
         criteriaQuery.where(
