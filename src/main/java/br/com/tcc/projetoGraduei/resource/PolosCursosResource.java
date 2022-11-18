@@ -1,5 +1,7 @@
 package br.com.tcc.projetoGraduei.resource;
 
+import br.com.tcc.projetoGraduei.dto.CursosPolos;
+import br.com.tcc.projetoGraduei.dto.PolosCidades;
 import br.com.tcc.projetoGraduei.model.PolosCursos;
 import br.com.tcc.projetoGraduei.repository.PolosCursosRepository;
 import br.com.tcc.projetoGraduei.service.PolosCursosService;
@@ -30,5 +32,12 @@ public class PolosCursosResource {
 
     @DeleteMapping("/{id}")
     public void remover (@PathVariable Integer id){polosCursosRepository.deleteById(id);
+    }
+
+    @CrossOrigin
+    @GetMapping("/cursos")
+    public List<CursosPolos> buscarPoloCurso(@RequestParam String nome_curso) {
+
+        return polosCursosRepository.listarPoloCurso(nome_curso);
     }
 }

@@ -5,8 +5,6 @@ estado_id int not null
 );
 
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Lençóis Paulista',24);
-INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Lençóis Paulista',1);
-
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Macatuba',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Borebi',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Areiópolis',24);
@@ -41,6 +39,7 @@ INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Itapui',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Dois corregos',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Mineiros do Tietê',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Botucatu',24);
+INSERT INTO cidades(nome_cidade, estado_id) VALUES ('São Paulo',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Itatinga',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Pardinho',24);
 INSERT INTO cidades(nome_cidade, estado_id) VALUES ('Anhembi',24);
