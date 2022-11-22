@@ -38,5 +38,26 @@ public class PolosCursosRepositoryImpl implements PolosCursosRepositoryQuery{
         return typedQuery.getResultList();
     }
 
+    public List<CursosPolos> listarCursoPolo(String nome_polo) {
+        CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
+
+        CriteriaQuery<CursosPolos> criteriaQuery = criteriaBuilder.
+                createQuery(CursosPolos.class);
+
+        Root<PolosCursos> root = criteriaQuery.from(PolosCursos.class);
+
+        criteriaQuery.select(criteriaBuilder.construct(CursosPolos.class,
+                root.get("id"),
+                root.get("cursos"),
+                root.get("polos")
+        ));
+
+        criteriaQuery.where(
+                criteriaBuilder.equal(root.get("polos").get("nome_polo"), nome_polo));
+
+        TypedQuery<CursosPolos> typedQuery = manager.createQuery(criteriaQuery);
+
+        return typedQuery.getResultList();
+    }
 
 }

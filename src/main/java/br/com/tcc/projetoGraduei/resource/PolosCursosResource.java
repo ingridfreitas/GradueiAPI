@@ -40,4 +40,11 @@ public class PolosCursosResource {
 
         return polosCursosRepository.listarPoloCurso(nome_curso);
     }
+
+    @CrossOrigin
+    @GetMapping("/polos")
+    public List<CursosPolos> buscarCursoPolo(@RequestParam String nome_polo) {
+
+        return polosCursosRepository.listarCursoPolo(nome_polo);
+    }
 }

@@ -38,13 +38,13 @@ public class PolosResource {
     public void remover (@PathVariable Integer id){polosRepository.deleteById(id);
     }
 
-    @CrossOrigin
+    @CrossOrigin()
     @GetMapping("/universidades")
     public List<PolosUniversidades> buscaPoloUni(@RequestParam String categoria){
         return polosRepository.listarPoloUni(categoria);
     }
 
-    @CrossOrigin
+    @CrossOrigin()
     @GetMapping("/cidades")
     public List<PolosCidades> buscarPoloCidade(@RequestParam String nome_cidade) {
 
