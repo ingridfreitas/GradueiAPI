@@ -12,3 +12,8 @@ INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('0', '...', 2, 24);
 
 INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('0', '...', 7, 43);
 INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('0', '...', 8, 43);
+INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('0', '...', 9, 24);
+
+INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('2', '...', 10, 24);
+
+

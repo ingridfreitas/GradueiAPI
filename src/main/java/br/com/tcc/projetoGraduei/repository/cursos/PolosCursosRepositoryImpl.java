@@ -26,6 +26,7 @@ public class PolosCursosRepositoryImpl implements PolosCursosRepositoryQuery{
 
         criteriaQuery.select(criteriaBuilder.construct(CursosPolos.class,
                 root.get("id"),
+                root.get("nota"),
                 root.get("cursos"),
                 root.get("polos")
                 ));
@@ -48,6 +49,7 @@ public class PolosCursosRepositoryImpl implements PolosCursosRepositoryQuery{
 
         criteriaQuery.select(criteriaBuilder.construct(CursosPolos.class,
                 root.get("id"),
+                root.get("nota"),
                 root.get("cursos"),
                 root.get("polos")
         ));
