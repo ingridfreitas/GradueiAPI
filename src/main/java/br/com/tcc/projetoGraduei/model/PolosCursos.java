@@ -8,7 +8,7 @@ public class PolosCursos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer nota;
+    private String nota;
     private String link;
 
     @JoinColumn(name = "polo_id")
@@ -27,11 +27,11 @@ public class PolosCursos {
         this.id = id;
     }
 
-    public Integer getNota() {
+    public String getNota() {
         return nota;
     }
 
-    public void setNota(Integer nota) {
+    public void setNota(String nota) {
         this.nota = nota;
     }
 
