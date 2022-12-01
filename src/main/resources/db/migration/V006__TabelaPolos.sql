@@ -18,7 +18,7 @@ INSERT INTO polos(nome_polo, latitude, longitude, universidade_id, cidade_id) VA
 INSERT INTO polos(nome_polo, latitude, longitude, universidade_id, cidade_id) VALUES ('Teste','-22.3347566', '-49.0628424', 12, 35);
 INSERT INTO polos(nome_polo, latitude, longitude, universidade_id, cidade_id) VALUES ('USC','-22.3347566', '-49.0628424', 4, 11);
 
-INSERT INTO polos(nome_polo, latitude, longitude, universidade_id, cidade_id) VALUES ('ENF','-22.3347566', '-49.0628424', 13, 35);
+INSERT INTO polos(nome_polo, latitude, longitude, universidade_id, cidade_id) VALUES ('ENF','-22.9125142', '-48.4650364', 13, 35);
 
 
 
