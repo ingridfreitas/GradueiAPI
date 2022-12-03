@@ -78,3 +78,10 @@ INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Terapia Ocupaci
 INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Turismo', '8 semestres', 'Este bacharel faz o planejamento, a organização, a promoção e a divulgação de viagens, eventos e atividades de lazer e de negócios. ', '/assets/cursos/tur.jpg');
 INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Zootecnia', '10 semestres', 'O Zootecnista é o responsável pelo aumento e melhoria da produção e da qualidade dos produtos e serviços de origem animal.', '/assets/cursos/zoo.jpg');
 INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Engenharia Civil', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Desing de Moda', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Engenharia Ambiental', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Engenharia Biotecnológica', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Engenharia de Produção', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Estética e Cosmetologia', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Gastronomia', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Jogos Digitais', '.', '.', '.');
