@@ -85,3 +85,4 @@ INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Engenharia de P
 INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Estética e Cosmetologia', '.', '.', '.');
 INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Gastronomia', '.', '.', '.');
 INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Jogos Digitais', '.', '.', '.');
+INSERT INTO cursos(nome_curso, duracao, descricao, img) VALUES ('Física Médica', '.', '.', '.');
