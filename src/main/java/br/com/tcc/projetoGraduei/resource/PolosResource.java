@@ -3,8 +3,10 @@ package br.com.tcc.projetoGraduei.resource;
 import br.com.tcc.projetoGraduei.dto.CidadeEstado;
 import br.com.tcc.projetoGraduei.dto.PolosCidades;
 import br.com.tcc.projetoGraduei.dto.PolosUniversidades;
+import br.com.tcc.projetoGraduei.model.Cidades;
 import br.com.tcc.projetoGraduei.model.Estados;
 import br.com.tcc.projetoGraduei.model.Polos;
+import br.com.tcc.projetoGraduei.model.Universidades;
 import br.com.tcc.projetoGraduei.repository.PolosRepository;
 import br.com.tcc.projetoGraduei.service.PolosService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +37,7 @@ public class PolosResource {
         return polos.isPresent() ? ResponseEntity.ok(polos.get()) : ResponseEntity.notFound() .build();
     }
 
+    @CrossOrigin()
     @DeleteMapping("/{id}")
     public void remover (@PathVariable Integer id){polosRepository.deleteById(id);
     }
@@ -49,5 +53,12 @@ public class PolosResource {
     public List<PolosCidades> buscarPoloCidade(@RequestParam String nome_cidade) {
 
         return polosRepository.listarPoloCidade(nome_cidade);
+    }
+
+    @CrossOrigin
+    @PostMapping()
+    public ResponseEntity<Polos> criar(@RequestBody Polos polos, Cidades cidades, Universidades universidades, HttpServletResponse response){
+        Polos poloSalvo = polosService.salvar(polos, cidades, universidades);
+        return ResponseEntity.status(HttpStatus.CREATED).body(poloSalvo);
     }
 }

@@ -11,6 +11,11 @@ import java.util.List;
 public class UniversidadesService {
     @Autowired
     private UniversidadesRepository universidadesRepository;
+
+    public Universidades salvar(Universidades universidades) {
+        return universidadesRepository.save(universidades);
+    }
+
     public List<Universidades> listarUniversidades(){
         return universidadesRepository.findAll();
     }

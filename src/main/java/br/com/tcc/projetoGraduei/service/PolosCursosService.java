@@ -12,4 +12,9 @@ public class PolosCursosService {
     @Autowired
     private PolosCursosRepository polosCursosRepository;
     public List<PolosCursos> listarPolosCursos(){return polosCursosRepository.findAll();}
+
+    public PolosCursos salvar(PolosCursos polosCursos) {
+        return polosCursosRepository.save(polosCursos);
+    }
+
 }

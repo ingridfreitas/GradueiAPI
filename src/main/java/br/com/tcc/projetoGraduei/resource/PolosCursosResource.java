@@ -6,9 +6,11 @@ import br.com.tcc.projetoGraduei.model.PolosCursos;
 import br.com.tcc.projetoGraduei.repository.PolosCursosRepository;
 import br.com.tcc.projetoGraduei.service.PolosCursosService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,6 +32,7 @@ public class PolosCursosResource {
         return polosCursos.isPresent() ? ResponseEntity.ok(polosCursos.get()) : ResponseEntity.notFound() .build();
     }
 
+    @CrossOrigin()
     @DeleteMapping("/{id}")
     public void remover (@PathVariable Integer id){polosCursosRepository.deleteById(id);
     }
@@ -46,5 +49,12 @@ public class PolosCursosResource {
     public List<CursosPolos> buscarCursoPolo(@RequestParam String nome_polo) {
 
         return polosCursosRepository.listarCursoPolo(nome_polo);
+    }
+
+    @CrossOrigin
+    @PostMapping()
+    public ResponseEntity<PolosCursos> criar(@RequestBody PolosCursos polosCursos, HttpServletResponse response){
+        PolosCursos pocurSalvo = polosCursosService.salvar(polosCursos);
+        return ResponseEntity.status(HttpStatus.CREATED).body(pocurSalvo);
     }
 }

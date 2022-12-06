@@ -8,6 +8,11 @@ import java.util.List;
 public class CursoService {
     @Autowired
     private CursosRepository cursoRepository;
+
+    public Cursos salvar(Cursos curso) {
+        return cursoRepository.save(curso);
+    }
+
     public List<Cursos> listarCursos(){
         return cursoRepository.findAll();
     }

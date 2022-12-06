@@ -6,11 +6,11 @@ import br.com.tcc.projetoGraduei.model.PolosCursos;
 
 public class CursosPolos {
     private Integer id;
-    private Integer nota;
+    private String nota;
     private Cursos cursos;
     private Polos polos;
 
-    public CursosPolos(Integer id, Integer nota, Cursos cursos, Polos polos) {
+    public CursosPolos(Integer id, String nota, Cursos cursos, Polos polos) {
         this.id = id;
         this.nota = nota;
         this.cursos = cursos;
@@ -25,11 +25,11 @@ public class CursosPolos {
         this.id = id;
     }
 
-    public Integer getNota() {
+    public String getNota() {
         return nota;
     }
 
-    public void setNota(Integer nota) {
+    public void setNota(String nota) {
         this.nota = nota;
     }
 

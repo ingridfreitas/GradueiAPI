@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,6 +36,14 @@ public class UniversidadesResource {
         return new ResponseEntity<List<Universidades>>(universidadesRepository.findByCategoria(categoria), HttpStatus.OK);
     }
 
+    @CrossOrigin()
+    @PostMapping()
+    public ResponseEntity<Universidades> criar(@RequestBody Universidades universidades, HttpServletResponse response){
+        Universidades uniSalva = universidadesService.salvar(universidades);
+        return ResponseEntity.status(HttpStatus.CREATED).body(uniSalva);
+    }
+
+    @CrossOrigin()
     @DeleteMapping("/{id}")
     public void remover (@PathVariable Integer id){
         universidadesRepository.deleteById(id);

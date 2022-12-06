@@ -114,3 +114,4 @@ INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('5', 'https://facul
 INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('5', 'https://www1.fob.usp.br/', 6, 41);
 INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('5', 'https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=25&codcur=25012&codhab=0&tipo=N', 6, 49);
 INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('5', 'https://uspdigital.usp.br/jupiterweb/jupCarreira.jsp?codmnu=8275', 6, 56);
+INSERT INTO polocurso(nota, link, polo_id, curso_id) VALUES ('5', 'https://www.fmb.unesp.br/', 4, 49);
